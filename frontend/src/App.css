@@ -1,0 +1,262 @@
+/* Estilos generales */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.App-header {
+  background-color: #fff159; /* Amarillo característico de Mercado Libre */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.App-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2em;
+}
+
+.App-header p {
+  color: #555;
+}
+
+.login-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3483fa; /* Azul de Mercado Libre */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2968c8;
+}
+
+.user-info {
+  margin-top: 10px;
+  font-style: italic;
+  color: #00a650; /* Verde para indicar estado logueado */
+}
+
+
+/* Main content */
+main {
+  padding-bottom: 60px; /* Espacio para el footer */
+}
+
+section {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #444;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Formularios y Botones */
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.search-button, .action-button {
+  padding: 12px 20px;
+  background-color: #3483fa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover, .action-button:hover {
+  background-color: #2968c8;
+}
+
+.search-button:disabled, .action-button:disabled {
+  background-color: #a0c7fa;
+  cursor: not-allowed;
+}
+
+/* Listas (Categorías y Resultados) */
+.categories-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-item {
+  background-color: #e0e0e0;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Grid de Resultados */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.result-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-item:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+}
+
+.item-image {
+  max-width: 100%;
+  height: 180px; /* Altura fija para la imagen */
+  object-fit: contain; /* Mantiene la proporción, puede dejar espacios */
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.item-title {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+  min-height: 40px; /* Para alinear títulos de varias líneas */
+}
+
+.item-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #00a650; /* Verde para el precio */
+  margin-bottom: 8px;
+}
+
+.item-category {
+  font-size: 0.85em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.item-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #fff159;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #f0e14a;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+.item-link:hover {
+  background-color: #f0e14a;
+}
+
+
+/* Mensajes de Error y Carga */
+.error-message {
+  color: #d9534f; /* Rojo para errores */
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Footer */
+.App-footer {
+  background-color: #333;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+.App-footer p {
+  margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 1.8em;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .search-input, .search-button {
+    width: 100%;
+    box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
+  }
+  .results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.5em;
+  }
+  .item-title {
+    font-size: 1em;
+  }
+  .item-price {
+    font-size: 1.1em;
+  }
+  .results-grid {
+    grid-template-columns: 1fr; /* Una columna en móviles muy pequeños */
+  }
+}
